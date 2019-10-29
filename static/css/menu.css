@@ -1,0 +1,54 @@
+nav {
+	clear:left;
+	position: -webkit-sticky; /* Safari */
+  	position: sticky;
+  	top: 0;
+	width: 100%;
+	background-color: #66CD00;
+}
+
+nav ul {
+	font-size: 25px;
+	font-family: Arial, Helvetica, sans-serif;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	background-color: #66CD00;
+	overflow: hidden;
+	width:1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*nav li {
+	float: left;
+	display: block;
+	height: 30px;
+	margin-left: 0px;
+	margin-left: auto;
+	margin-right: auto;
+
+}*/
+
+nav li a {
+	float: left;
+	text-decoration: none;
+	display: block;
+	color: white;
+	padding: 10px 10px 10px 10px;
+}
+
+nav li a:hover {
+	background-color: white;
+	color: #66CD00;
+	/*text-decoration: underline;*/
+}
+
+nav li a:active {
+	color: black;
+}
+
+.active {
+  background-color: white;
+  color: #66CD00;
+}

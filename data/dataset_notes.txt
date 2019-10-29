@@ -1,0 +1,31 @@
+Notes for Datasets
+
+E0 is the file that contains the data for the EPL 2017/18 season and E1 is the file that contains the data for the EPL for the 2018/19 season.
+
+Key to results E1,E0:
+Date = Match Date (dd/mm/yy)
+HomeTeam = Home Team
+AwayTeam = Away Team
+FTHG and HG = Full Time Home Team Goals
+FTAG and AG = Full Time Away Team Goals
+FTR and Res = Full Time Result (H=Home Win, D=Draw, A=Away Win)
+HTHG = Half Time Home Team Goals
+HTAG = Half Time Away Team Goals
+HTR = Half Time Result (H=Home Win, D=Draw, A=Away Win)
+Referee = Match Referee
+HS = Home Team Shots
+AS = Away Team Shots
+HST = Home Team Shots on Target
+AST = Away Team Shots on Target
+HC = Home Team Corners
+AC = Away Team Corners
+HF = Home Team Fouls Committed
+AF = Away Team Fouls Committed
+HY = Home Team Yellow Cards
+AY = Away Team Yellow Cards
+HR = Home Team Red Cards
+AR = Away Team Red Cards
+
+E1newpredictions.csv contains the most recent entertainment predictions for the E1 data, these will then be copy and pasted directly into the E1 file with the correct match, this file is mainly used by the jupyter notebook to print the match ratings to prevent overwriting the data from E1.
+
+testData.csv is a bunch of matches with entertainment predictions which is used to test the model.

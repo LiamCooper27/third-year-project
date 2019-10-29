@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Good Game - Contact</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/reset.css') }}"/>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}"/>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/menu.css') }}"/>
+	<script type="text/javascript" src="{{ url_for('static', filename='scripts/formvalidation.js') }}" ></script>
+
+</head>
+<body>
+
+	<header>
+		<h1>
+			<a href="{{ url_for('home') }}">
+				<img src="{{ url_for('static', filename='images/logomain.png') }}" alt="main logo"/>
+			</a>
+		</h1>
+
+		<nav>
+			<ul>
+				<li><a href="{{ url_for('home') }}">Home</a></li>
+				<li><a href="{{ url_for('ratings') }}">Ratings</a></li>
+				<li><a href="{{ url_for('teams') }}">Teams</a></li>
+				<li><a href="{{ url_for('opinions') }}">Your Opinion</a></li>
+				<li><a class="active" href="{{ url_for('contact') }}" style="float:right">Contact</a></li>
+			</ul>
+		</nav>
+
+	</header>
+
+	<div id="container">
+
+		<div class="leftcolumn">
+			<div class="contentsection">
+				<h2 class="sectionheader">Your Opinion Matters</h2>
+				<p>One of our main concerns is providing the users with the best possible experience
+					when using this website, so it is important to us that we listen to the feedback we get from our users and try to improve.
+				</p>
+				<p>If you would like to suggest any improvements or tell us what you like about the site then you can let us know by using the form below.</p>
+			</div>
+			<div class="contentsection">
+				<h2 class="sectionheader">Form:</h2>
+
+				<div id="error"></div>
+
+				<form name="testform" action="#" method="post" onSubmit="return fnValidateForm();">
+
+					<div class="formgroup">
+						<label for="sendername">Name:</label>
+						<input type="text" name="sendername" /><br>
+					</div>
+
+					<div class="formgroup">
+						<label for="email">Email:</label>
+						<input type="text" name="email" /><br>
+					</div>
+
+					<div class="formgroup">
+						<label for="age">Age:</label>
+						<input type="radio" name="age" value="-19" > 19 or younger
+	  					<input type="radio" name="age" value="20-29" checked> 20-29
+						<input type="radio" name="age" value="30-39" > 30-39
+						<input type="radio" name="age" value="40-49" > 40-49
+						<input type="radio" name="age" value="50+" > 50 or older<br>
+					</div>
+
+					<div class="formgroup">
+						<label for="viewinghabbit">Football Viewing Habbits:</label>
+						<input type="radio" name="viewinghabbit" value="Low amount of viewing" > Low
+	  					<input type="radio" name="viewinghabbit" value="Medium amount of viewing" checked> Medium
+						<input type="radio" name="viewinghabbit" value="High amount of viewing"> High
+					</div>
+
+					<div class="formgroup">
+						<label for="designrating">Rate our design:</label>
+						<input type="radio" name="designrating" value="one star">
+						<img src="{{ url_for('static', filename='images/onestarSmall.png') }}" alt="one stars" />
+	  					<input type="radio" name="designrating" value="two stars">
+						<img src="{{ url_for('static', filename='images/twostarSmall.png') }}" alt="two stars" />
+						<input type="radio" name="designrating" value="three stars" checked>
+						<img src="{{ url_for('static', filename='images/threestarSmall.png') }}" alt="three stars" />
+	  					<input type="radio" name="designrating" value="four stars">
+						<img src="{{ url_for('static', filename='images/fourstarSmall.png') }}" alt="four stars" />
+						<input type="radio" name="designrating" value="five stars">
+						<img src="{{ url_for('static', filename='images/fivestarSmall.png') }}" alt="five stars" />
+					</div>
+
+					<div class="formgroup">
+						<label for="messagetx">Any improvements:</label>
+						<textarea name="message" maxlength='1000'></textarea>
+					</div>
+
+					<div class="buttongroup">
+						<input type="submit" value="Submit" />
+						<input type="reset" value="Reset" />
+					</div>
+
+				</form>
+
+			</div>
+		</div>
+
+		<div class="rightcolumn">
+			<div class="contentsection">
+				<h2 class="sectionheader">My details</h2>
+				<h3>Name:</h3>
+				<p class="paradivider">Liam Cooper</p>
+				<h3>Email:</h3>
+				<p class="paradivider">916153@swansea.ac.uk</p>
+				<h3>Occupation:</h3>
+				<p class="paradivider">Student - Studying Computer Science at Swansea University</p>
+			</div>
+		</div>
+
+	</div>
+
+	<footer>
+		<p>Developed by: Liam Cooper</p>
+		<p>My Email: 916153@swansea.ac.uk</p>
+		<p>GoodGame pages:</p>
+		<p>| <a href="{{ url_for('home') }}">Home</a> | <a href="{{ url_for('ratings') }}">Ratings</a>
+			| <a href="{{ url_for('teams') }}">Teams</a> | <a href="{{ url_for('opinions') }}">Your Opinion</a>
+			| <a href="{{ url_for('contact') }}">Contact</a> |</p>
+		<p>&copy;Copyright 2019. All Rights Reserved.</p>
+	</footer>
+
+</body>
+</html>

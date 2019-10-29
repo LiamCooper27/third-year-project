@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Good Game - Teams</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/reset.css') }}"/>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}"/>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/menu.css') }}"/>
+
+</head>
+<body>
+
+	<header>
+		<h1>
+			<a href="{{ url_for('home') }}">
+				<img src="{{ url_for('static', filename='images/logomain.png') }}" alt="main logo"/>
+			</a>
+		</h1>
+
+		<nav>
+			<ul>
+				<li><a href="{{ url_for('home') }}">Home</a></li>
+				<li><a href="{{ url_for('ratings') }}">Ratings</a></li>
+				<li><a class="active" href="{{ url_for('teams') }}">Teams</a></li>
+				<li><a href="{{ url_for('opinions') }}">Your Opinion</a></li>
+				<li><a href="{{ url_for('contact') }}" style="float:right">Contact</a></li>
+			</ul>
+		</nav>
+
+	</header>
+
+
+	<div id="container">
+
+		<div class="leftcolumn">
+			<div class="contentsection">
+
+				{% if name == "Arsenal" %}
+					<h2 class="sectionheader">Arsenal</h2>
+					<h4 class="badge">
+						<img src="{{ url_for('static', filename='images/Arsenal.png') }}" alt="Arsenal Badge" />
+					</h4>
+					<p class="teaminfo"><b>Location:</b> London</p>
+					<p class="teaminfo"><b>Stadium:</b> Emirates</p>
+					<p class="teaminfo"><b>Capacity:</b> 60,260</p>
+					<p class="teaminfo"><b>Manager:</b> Unai Emery</p>
+					<p class="teaminfo"><b>Club Captain:</b> Laurent Koscielny</p>
+
+				{% elif name == "Bournemouth" %}
+					<h2 class="sectionheader">Bournemouth</h2>
+					<h4 class="badge">
+						<img src="{{ url_for('static', filename='images/Bournemouth.png') }}" alt="Bournemouth Badge" />
+					</h4>
+					<p class="teaminfo"><b>Location:</b> Bournemouth</p>
+					<p class="teaminfo"><b>Stadium:</b> Dean Court</p>
+					<p class="teaminfo"><b>Capacity:</b> 11,329</p>
+					<p class="teaminfo"><b>Manager:</b> Eddie Howe</p>
+					<p class="teaminfo"><b>Club Captain:</b> Simon Francis</p>
+
+				{% elif name == "Brighton" %}
+					<h2 class="sectionheader">Brighton & Hove Albion</h2>
+					<h4 class="badge">
+						<img src="{{ url_for('static', filename='images/Brighton.png') }}" alt="Brighton Badge" />
+					</h4>
+					<p class="teaminfo"><b>Location:</b> Brighton</p>
+					<p class="teaminfo"><b>Stadium:</b> Falmer Stadium</p>
+					<p class="teaminfo"><b>Capacity:</b> 30,666</p>
+					<p class="teaminfo"><b>Manager:</b> Chris Hughton</p>
+					<p class="teaminfo"><b>Club Captain:</b> Bruno</p>
+				{% elif name == "Burnley" %}
+					<h2 class="sectionheader">Burnley</h2>
+					<h4 class="badge">
+						<img src="{{ url_for('static', filename='images/Burnley.png') }}" alt="Burnley Badge" />
+					</h4>
+					<p class="teaminfo"><b>Location:</b> Burnley</p>
+					<p class="teaminfo"><b>Stadium:</b> Turf Moor</p>
+					<p class="teaminfo"><b>Capacity:</b> 21,944</p>
+					<p class="teaminfo"><b>Manager:</b> Sean Dyche</p>
+					<p class="teaminfo"><b>Club Captain:</b> Tom Heaton</p>
+				{% elif name == "Cardiff" %}
+					<h2 class="sectionheader">Cardiff</h2>
+					<h4 class="badge">
+						<img src="{{ url_for('static', filename='images/Cardiff.png') }}" alt="Cardiff Badge" />
+					</h4>
+					<p class="teaminfo"><b>Location:</b> Cardiff</p>
+					<p class="teaminfo"><b>Stadium:</b> Cardiff City Stadium</p>
+					<p class="teaminfo"><b>Capacity:</b> 33,316</p>
+					<p class="teaminfo"><b>Manager:</b> Neil Warnock</p>
+					<p class="teaminfo"><b>Club Captain:</b> Sean Morrison</p>
+				{% elif name == "Chelsea" %}
+					<h2 class="sectionheader">Chelsea</h2>
+					<h4 class="badge">
+						<img src="{{ url_for('static', filename='images/Chelsea.png') }}" alt="Chelsea Badge" />
+					</h4>
+					<p class="teaminfo"><b>Location:</b> London</p>
+					<p class="teaminfo"><b>Stadium:</b> Stamford Bridge</p>
+					<p class="teaminfo"><b>Capacity:</b> 40,853</p>
+					<p class="teaminfo"><b>Manager:</b> Maurizio Sarri</p>
+					<p class="teaminfo"><b>Club Captain:</b> Gary Cahill</p>
+
+				{% elif name == "Everton" %}
+					<h2 class="sectionheader">Everton</h2>
+					<h4 class="badge">
+						<img src="{{ url_for('static', filename='images/Everton.png') }}" alt="Everton Badge" />
+					</h4>
+					<p class="teaminfo"><b>Location:</b> Liverpool</p>
+					<p class="teaminfo"><b>Stadium:</b> Goodison Park</p>
+					<p class="teaminfo"><b>Capacity:</b> 39,221</p>
+					<p class="teaminfo"><b>Manager:</b> Marco Silva</p>
+					<p class="teaminfo"><b>Club Captain:</b> Phil Jagielka</p>
+				{% elif name == "Fulham" %}
+					<h2 class="sectionheader">Fulham</h2>
+					<h4 class="badge">
+						<img src="{{ url_for('static', filename='images/Fulham.png') }}" alt="Fulham Badge" />
+					</h4>
+					<p class="teaminfo"><b>Location:</b> London</p>
+					<p class="teaminfo"><b>Stadium:</b> Craven Cottage</p>
+					<p class="teaminfo"><b>Capacity:</b> 25,700</p>
+					<p class="teaminfo"><b>Manager:</b> Scott Parker</p>
+					<p class="teaminfo"><b>Club Captain:</b> Tom Cairney</p>
+				{% elif name == "Huddersfield" %}
+					<h2 class="sectionheader">Huddersfield</h2>
+					<h4 class="badge">
+						<img src="{{ url_for('static', filename='images/Huddersfield.png') }}" alt="Huddersfield Badge" />
+					</h4>
+					<p class="teaminfo"><b>Location:</b> Huddersfield</p>
+					<p class="teaminfo"><b>Stadium:</b> Kirklees Stadium</p>
+					<p class="teaminfo"><b>Capacity:</b> 24,500</p>
+					<p class="teaminfo"><b>Manager:</b> Jan Siewert</p>
+					<p class="teaminfo"><b>Club Captain:</b> Tommy Smith</p>
+				{% elif name == "Leicester" %}
+					<h2 class="sectionheader">Leicester</h2>
+					<h4 class="badge">
+						<img src="{{ url_for('static', filename='images/Leicester.png') }}" alt="Leicester Badge" />
+					</h4>
+					<p class="teaminfo"><b>Location:</b> Leicester</p>
+					<p class="teaminfo"><b>Stadium:</b> King Power Stadium</p>
+					<p class="teaminfo"><b>Capacity:</b> 32,273</p>
+					<p class="teaminfo"><b>Manager:</b> Brendan Rodgers</p>
+					<p class="teaminfo"><b>Club Captain:</b> Wes Morgan</p>
+				{% elif name == "Liverpool" %}
+					<h2 class="sectionheader">Liverpool</h2>
+					<h4 class="badge">
+						<img src="{{ url_for('static', filename='images/Liverpool.png') }}" alt="Leicester Badge" />
+					</h4>
+					<p class="teaminfo"><b>Location:</b> Liverpool</p>
+					<p class="teaminfo"><b>Stadium:</b> Anfield</p>
+					<p class="teaminfo"><b>Capacity:</b> 54,074</p>
+					<p class="teaminfo"><b>Manager:</b> Jurgen Klopp</p>
+					<p class="teaminfo"><b>Club Captain:</b> Jordan Henderson</p>
+				{% elif name == "Man City"%}
+					<h2 class="sectionheader">Manchester City</h2>
+					<h4 class="badge">
+						<img src="{{ url_for('static', filename='images/Man city.png') }}" alt="Man City Badge" />
+					</h4>
+					<p class="teaminfo"><b>Location:</b> Manchester</p>
+					<p class="teaminfo"><b>Stadium:</b> Etihad Stadium</p>
+					<p class="teaminfo"><b>Capacity:</b> 55,017</p>
+					<p class="teaminfo"><b>Manager:</b> Pep Guardiola</p>
+					<p class="teaminfo"><b>Club Captain:</b> Vincent Kompany</p>
+				{% elif name == "Man United"%}
+					<h2 class="sectionheader">Manchester United</h2>
+					<h4 class="badge">
+						<img src="{{ url_for('static', filename='images/man united.png') }}" alt="Man United Badge" />
+					</h4>
+					<p class="teaminfo"><b>Location:</b> Manchester</p>
+					<p class="teaminfo"><b>Stadium:</b> Old Trafford</p>
+					<p class="teaminfo"><b>Capacity:</b> 74,879</p>
+					<p class="teaminfo"><b>Manager:</b> Ole Gunnar Solskjaer</p>
+					<p class="teaminfo"><b>Club Captain:</b> Antonio Valencia</p>
+				{% elif name == "Newcastle"%}
+					<h2 class="sectionheader">Newcastle United</h2>
+					<h4 class="badge">
+						<img src="{{ url_for('static', filename='images/Newcastle.png') }}" alt="Newcastle Badge" />
+					</h4>
+					<p class="teaminfo"><b>Location:</b> Newcastle Upon Tyne</p>
+					<p class="teaminfo"><b>Stadium:</b> St James' Park</p>
+					<p class="teaminfo"><b>Capacity:</b> 52,354</p>
+					<p class="teaminfo"><b>Manager:</b> Rafael Benitez</p>
+					<p class="teaminfo"><b>Club Captain:</b> Jamaal Lascelles</p>
+				{% elif name == "Southampton"%}
+					<h2 class="sectionheader">Southampton</h2>
+					<h4 class="badge">
+						<img src="{{ url_for('static', filename='images/Southampton.png') }}" alt="Southampton Badge" />
+					</h4>
+					<p class="teaminfo"><b>Location:</b> Southampton</p>
+					<p class="teaminfo"><b>Stadium:</b> St Mary's Stadium</p>
+					<p class="teaminfo"><b>Capacity:</b> 32,384</p>
+					<p class="teaminfo"><b>Manager:</b> Ralph Hasenhuttl</p>
+					<p class="teaminfo"><b>Club Captain:</b> Pierre-Emile Hojbjerg</p>
+				{% elif name == "Tottenham"%}
+					<h2 class="sectionheader">Tottenham Hotspur</h2>
+					<h4 class="badge">
+						<img src="{{ url_for('static', filename='images/spurs.png') }}" alt="Tottenham Hotspur Badge" />
+					</h4>
+					<p class="teaminfo"><b>Location:</b> London</p>
+					<p class="teaminfo"><b>Stadium:</b> Tottenham Hotspur Stadium</p>
+					<p class="teaminfo"><b>Capacity:</b> 62,062</p>
+					<p class="teaminfo"><b>Manager:</b> Mauricio Pochettino</p>
+					<p class="teaminfo"><b>Club Captain:</b> Hugo Lloris</p>
+				{% elif name == "Watford"%}
+					<h2 class="sectionheader">Watford</h2>
+					<h4 class="badge">
+						<img src="{{ url_for('static', filename='images/watford.png') }}" alt="Watford Badge" />
+					</h4>
+					<p class="teaminfo"><b>Location:</b> Watford</p>
+					<p class="teaminfo"><b>Stadium:</b> Vicarage Road</p>
+					<p class="teaminfo"><b>Capacity:</b> 20,400</p>
+					<p class="teaminfo"><b>Manager:</b> Javi Gracia</p>
+					<p class="teaminfo"><b>Club Captain:</b> Troy Deeney</p>
+				{% elif name == "West Ham"%}
+					<h2 class="sectionheader">West Ham United</h2>
+					<h4 class="badge">
+						<img src="{{ url_for('static', filename='images/west ham.png') }}" alt="West Ham Badge" />
+					</h4>
+					<p class="teaminfo"><b>Location:</b> London</p>
+					<p class="teaminfo"><b>Stadium:</b> London Stadium</p>
+					<p class="teaminfo"><b>Capacity:</b> 60,000</p>
+					<p class="teaminfo"><b>Manager:</b> Manuel Pellegrini</p>
+					<p class="teaminfo"><b>Club Captain:</b> Mark Noble</p>
+				{% elif name == "Wolves"%}
+					<h2 class="sectionheader">Wolverhampton Wanderers</h2>
+					<h4 class="badge">
+						<img src="{{ url_for('static', filename='images/Wolves.png') }}" alt="Wolverhampton Wanderers Badge" />
+					</h4>
+					<p class="teaminfo"><b>Location:</b> Wolverhampton</p>
+					<p class="teaminfo"><b>Stadium:</b> Molineux Stadium</p>
+					<p class="teaminfo"><b>Capacity:</b> 32,050</p>
+					<p class="teaminfo"><b>Manager:</b> Nuno Espirito Santo</p>
+					<p class="teaminfo"><b>Club Captain:</b> Conor Coady</p>
+				{% else %}
+					<h2 class="sectionheader">Select a Team</h2>
+					<p>Select a team from the list on the right to see more information about them</p>
+				{% endif %}
+
+				<p class="matches">Matches Played</p>
+				<table id="opinionstable">
+					<tr>
+						<th></th>
+						<th></th>
+						<th></th>
+						<th></th>
+						<th>ML Algorithm</th>
+						<th>Human</th>
+					</tr>
+
+					{% for i in tables.itertuples() %}
+						<tr>
+							<td>{{ i.HomeTeam }}</td>
+							<!--<td>{{ i.FTHG }} - {{ i.FTAG }}</td>-->
+							<td>vs</td>
+							<td>{{ i.AwayTeam }}</td>
+							<td>{{ i.Date }}</td>
+							<td>
+								{% if i.MPER == 5.0 %}
+									<img src="{{ url_for('static', filename='images/fivestarSmall.png') }}" alt="five stars" />
+								{% elif i.MPER == 4.0 %}
+									<img src="{{ url_for('static', filename='images/fourstarSmall.png') }}" alt="four stars" />
+								{% elif i.MPER == 3.0 %}
+									<img src="{{ url_for('static', filename='images/threestarSmall.png') }}" alt="three stars" />
+								{% elif i.MPER == 2.0 %}
+									<img src="{{ url_for('static', filename='images/twostarSmall.png') }}" alt="two stars" />
+								{% elif i.MPER == 1.0 %}
+									<img src="{{ url_for('static', filename='images/onestarSmall.png') }}" alt="one stars" />
+								{% else %}
+									Not yet rated
+								{% endif %}
+							</td>
+							<td>
+								{% if i.HER == 5.0 %}
+									<img src="{{ url_for('static', filename='images/fivestarSmall.png') }}" alt="five stars" />
+								{% elif i.HER == 4.0 %}
+									<img src="{{ url_for('static', filename='images/fourstarSmall.png') }}" alt="four stars" />
+								{% elif i.HER == 3.0 %}
+									<img src="{{ url_for('static', filename='images/threestarSmall.png') }}" alt="three stars" />
+								{% elif i.HER == 2.0 %}
+									<img src="{{ url_for('static', filename='images/twostarSmall.png') }}" alt="two stars" />
+								{% elif i.HER == 1.0 %}
+									<img src="{{ url_for('static', filename='images/onestarSmall.png') }}" alt="one stars" />
+								{% else %}
+									Not yet rated
+								{% endif %}
+							</td>
+						</tr>
+					{% endfor %}
+				</table>
+
+				<p class="matches">Average Match Entertainment Rating</p>
+				{% if rating == 5.0 %}
+					<h4 class="badge">
+						<img src="{{ url_for('static', filename='images/fivestar.png') }}" alt="five stars" />
+					</h4>
+				{% elif rating == 4.0 %}
+					<h4 class="badge">
+						<img src="{{ url_for('static', filename='images/fourstar.png') }}" alt="four stars" />
+					</h4>
+				{% elif rating == 3.0 %}
+					<h4 class="badge">
+						<img src="{{ url_for('static', filename='images/threestar.png') }}" alt="three stars" />
+					</h4>
+				{% elif rating == 2.0 %}
+					<h4 class="badge">
+						<img src="{{ url_for('static', filename='images/twostar.png') }}" alt="two stars" />
+					</h4>
+				{% else %}
+					<h4 class="badge">
+						<img src="{{ url_for('static', filename='images/onestar.png') }}" alt="one stars" />
+					</h4>
+				{% endif %}
+
+				<p>(This is the average of all the ratings that our machine learning algorithm has predicted for this team throughout the season)</p>
+			</div>
+		</div>
+
+		<div class="rightcolumn">
+			<div class="contentsection">
+				<h2 class="sectionheader">Teams</h2>
+				<h3>Select a team from the following list of English Premier League teams to see how entertaining the games they play are:</h3>
+
+				<form action="" method="POST" name="form">
+	  					<input type="radio" name="team" value="Arsenal" checked> Arsenal<br>
+	  					<input type="radio" name="team" value="Bournemouth"> Bournemouth<br>
+	  					<input type="radio" name="team" value="Brighton"> Brighton & Hove Albion<br>
+						<input type="radio" name="team" value="Burnley"> Burnley<br>
+						<input type="radio" name="team" value="Cardiff"> Cardiff City<br>
+						<input type="radio" name="team" value="Chelsea"> Chelsea<br>
+						<input type="radio" name="team" value="Everton"> Everton<br>
+						<input type="radio" name="team" value="Fulham"> Fulham<br>
+						<input type="radio" name="team" value="Huddersfield"> Huddersfield Town<br>
+						<input type="radio" name="team" value="Leicester"> Leicester City<br>
+						<input type="radio" name="team" value="Liverpool"> Liverpool<br>
+						<input type="radio" name="team" value="Man City"> Manchester City<br>
+						<input type="radio" name="team" value="Man United"> Manchester United<br>
+						<input type="radio" name="team" value="Newcastle"> Newcastle United<br>
+						<input type="radio" name="team" value="Southampton"> Southampton<br>
+						<input type="radio" name="team" value="Tottenham"> Tottenham Hotspur<br>
+						<input type="radio" name="team" value="Watford"> Watford<br>
+						<input type="radio" name="team" value="West Ham"> West Ham United<br>
+						<input type="radio" name="team" value="Wolves"> Wolverhampton Wanderers<br>
+
+					<div class="buttongroup">
+						<input type="submit" value="Choose" />
+					</div>
+				</form>
+
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		<p>Developed by: Liam Cooper</p>
+		<p>My Email: 916153@swansea.ac.uk</p>
+		<p>GoodGame pages:</p>
+		<p>| <a href="{{ url_for('home') }}">Home</a> | <a href="{{ url_for('ratings') }}">Ratings</a>
+			| <a href="{{ url_for('teams') }}">Teams</a> | <a href="{{ url_for('opinions') }}">Your Opinion</a>
+			| <a href="{{ url_for('contact') }}">Contact</a> |</p>
+		<p>&copy;Copyright 2019. All Rights Reserved.</p>
+	</footer>
+
+</body>
+</html>

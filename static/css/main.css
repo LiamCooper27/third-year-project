@@ -1,0 +1,293 @@
+html {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12pt;
+	background: white;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	top: 0;
+	left: 0;
+	right: 0;
+	margin-top: 0;
+	margin-bottom: 20px;
+	position: absolute;
+	width: 100%;
+	background: #66CD00;
+	/*height: 120px;*/
+	/*box-shadow: 0 0 10px #A0A0A0;*/
+	text-align: center;
+}
+
+footer {
+	width: 100%;
+	background: #66CD00;
+	position: relative;
+   	bottom:0;
+   	/*height:60px;*/
+	height: 100%;
+	clear: both;
+	box-shadow: 0 0 5px #A0A0A0;
+	padding: 10px;
+	/*margin-top: 45px;*/
+	text-align: center;
+}
+
+footer p {
+	padding-top: 10px;
+	color: white;
+}
+
+h1 {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	/*position: relative;*/
+	top:0;
+}
+
+.sectionheader {
+	margin-top:0;
+	padding: 5px;
+	background: #66CD00;
+	font-size: 25px;
+	font-weight: bold;
+	width: 100%;
+	color: white;
+	border-top-right-radius: 15px 10px;
+	border-top-left-radius: 15px 10px;
+	text-align: center;
+	/*padding-top: 5px;
+	height: 30px;*/
+
+}
+
+h3 {
+	font-size: 15px;
+	color: black;
+}
+
+.paradivider {
+	padding: 5px 5px 5px 0;
+	border-bottom: 2px solid #66CD00;
+}
+
+.badge {
+	margin-top:10px;
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+	/*padding-top: 5px;
+	height: 30px;*/
+
+}
+
+.teaminfo {
+	text-align: center;
+	margin-top:10px;
+}
+
+.matches {
+	text-align: center;
+	margin-top:10px;
+	font-size: 25px;
+	font-weight: bold;
+	background: #66CD00;
+	color: white;
+	border-top-right-radius: 15px 10px;
+	border-top-left-radius: 15px 10px;
+	border-bottom-right-radius: 15px 10px;
+	border-bottom-left-radius: 15px 10px;
+}
+
+#container {
+	clear: both;
+	margin-top: 195px;
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	/*min-height: 100%;*/
+	background: white;
+	position: relative;
+}
+
+#content {
+	width:1000px;
+	background:white;
+	padding-top: 5px;
+}
+
+.leftcolumn {
+	width: 700px;
+	float: left;
+	background: white;
+	padding-right: 20px;
+	/*margin-bottom: 25px;*/
+}
+
+.rightcolumn {
+	width: 300px;
+	float: left;
+	background: white;
+	/*margin-bottom: 25px;*/
+}
+
+.contentsection {
+	clear: left;
+	/*width: 675px;*/
+	width: 100%;
+	padding-top: 0;
+	box-shadow: 0px 1px 5px #A0A0A0;
+	border-top-right-radius: 15px 10px;
+	border-top-left-radius: 15px 10px;
+	border-bottom-right-radius: 15px 10px;
+	border-bottom-left-radius: 15px 10px;
+	margin-bottom: 20px;
+	padding-bottom: 10px;
+}
+
+.contentsection p {
+	 /*padding-left:15px;
+	 padding-right:15px;*/
+	 margin: 10px 15px 0px 15px;
+}
+
+.contentsection h3 {
+	margin: 10px 15px 0px 15px;
+	font-size: 12pt;
+	color: black;
+
+}
+
+#opinionstable {
+	padding-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 5px;
+	text-align: center;
+
+}
+
+#opinionstable td,tr,th {
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 5px;
+
+}
+
+.matchseperation {
+	border-bottom: 1px solid #66CD00;
+}
+
+#liststyle {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 5px;
+	overflow: auto;
+	text-align: center;
+	margin-left: 15px;
+	margin-right: 15px;
+	overflow-y: scroll;
+}
+#liststyle option {
+	text-align: center;
+	padding: 10px;
+	overflow-y: scroll;
+}
+
+#liststyle select {
+	width: 100%;
+	padding: 5px;
+	border: 2px solid #66CD00;
+	overflow-y: scroll;
+}
+
+#form {
+	width: 635px;
+	margin-left: 10px;
+	margin-top: 10px;
+	padding-top: 0;
+	box-shadow: 0px 3px 8px #A0A0A0;
+	border-top-right-radius: 15px 10px;
+	border-top-left-radius: 15px 10px;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+
+#error {
+	margin-left: 15px;
+	margin-top: 10px;
+	visibility: hidden;
+	display: none;
+	width: 300px;
+}
+
+#error p{
+	margin: 0 0 5px 0;
+	background: red;
+	border: 1px solid #990000;
+	color: white;
+}
+
+label {
+	display: block;
+	width: 130px;
+	float: left;
+	padding: 5px 10px 10px 0;
+}
+
+div.formgroup {
+	clear: left;
+	margin: 10px 15px 5px 15px;
+}
+
+input.stdtext {
+	width: 400px;
+	border: 2;
+	color: #000000;
+	padding: 3px;
+
+}
+
+textarea {
+	width: 100%;
+	height: 500px;
+	border: 2;
+	color: #000000;
+	padding: 3px;
+	resize: none;
+}
+
+div.buttongroup {
+	margin-top: 20px;
+}
+
+input[type="submit"], input[type="reset"] {
+	border: 1;
+	background: #66CD00;
+	color: white;
+	font-weight: bold;
+	text-transform: upercase;
+	padding: 10px 10px 10px 10px;
+	margin: 0px 0px 10px 15px;
+}
+
+input[type="radio"] {
+	border: 1;
+	background: #66CD00;
+	color: green;
+	border: 2px solid #66CD00;
+	margin: 5px 0px 0px 15px;
+}
+
+input:invalid {
+  border: 2px solid red;
+}

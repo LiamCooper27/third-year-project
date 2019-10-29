@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Good Game - Home</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/reset.css') }}"/>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}"/>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/menu.css') }}"/>
+
+</head>
+<body>
+
+	<header>
+		<h1>
+			<a href="{{ url_for('home') }}">
+				<img src="{{ url_for('static', filename='images/logomain.png') }}" alt="main logo"/>
+			</a>
+		</h1>
+
+		<nav>
+			<ul>
+				<li><a class="active" href="{{ url_for('home') }}">Home</a></li>
+				<li><a href="{{ url_for('ratings') }}">Ratings</a></li>
+				<li><a href="{{ url_for('teams') }}">Teams</a></li>
+				<li><a href="{{ url_for('opinions') }}">Your Opinion</a></li>
+				<li><a href="{{ url_for('contact') }}" style="float:right">Contact</a></li>
+			</ul>
+		</nav>
+
+	</header>
+
+
+	<div id="container">
+
+		<div class="leftcolumn">
+			<div class="contentsection">
+				<h2 class="sectionheader">Welcome</h2>
+				<p>Hello and welcome to GoodGame!</p>
+				<p>This website is dedicated to providing fans of football with entertainment ratings for football
+					matches from the English premier league 2018/19 season. Each week we will run the match statistics
+					through our machine learning algorithm then display the outputted entertainment ratings on the site, these
+						will then be compared to a prediction from a human to see how accurate our predictions are.</p>
+			</div>
+			<div class="contentsection">
+				<h2 class="sectionheader">Latest Ratings</h2>
+				<table id="opinionstable">
+					<tr>
+						<th></th>
+						<th></th>
+						<th></th>
+						<th></th>
+						<th>ML Algorithm</th>
+						<th>Human</th>
+					</tr>
+
+					{% for i in recent.itertuples() %}
+						<tr class="matchseperation">
+							<td>
+								<img src="static/images/{{ i.HomeTeam }}Small.png" alt="{{ i.HomeTeam }} badge" /></br>
+								{{ i.HomeTeam }}
+							</td>
+							<td>vs</td>
+							<td>
+								<img src="static/images/{{ i.AwayTeam }}Small.png" alt="{{ i.AwayTeam }} badge" /></br>
+								{{ i.AwayTeam }}
+							</td>
+							<td>{{ i.Date }}</td>
+							<td>
+								{% if i.MPER == 5.0 %}
+									<img src="{{ url_for('static', filename='images/fivestarSmall.png') }}" alt="five stars" />
+								{% elif i.MPER == 4.0 %}
+									<img src="{{ url_for('static', filename='images/fourstarSmall.png') }}" alt="four stars" />
+								{% elif i.MPER == 3.0 %}
+									<img src="{{ url_for('static', filename='images/threestarSmall.png') }}" alt="three stars" />
+								{% elif i.MPER == 2.0 %}
+									<img src="{{ url_for('static', filename='images/twostarSmall.png') }}" alt="two stars" />
+								{% elif i.MPER == 1.0 %}
+									<img src="{{ url_for('static', filename='images/onestarSmall.png') }}" alt="one stars" />
+								{% else %}
+									Not yet rated
+								{% endif %}
+							</td>
+							<td>
+								{% if i.HER == 5.0 %}
+									<img src="{{ url_for('static', filename='images/fivestarSmall.png') }}" alt="five stars" />
+								{% elif i.HER == 4.0 %}
+									<img src="{{ url_for('static', filename='images/fourstarSmall.png') }}" alt="four stars" />
+								{% elif i.HER == 3.0 %}
+									<img src="{{ url_for('static', filename='images/threestarSmall.png') }}" alt="three stars" />
+								{% elif i.HER == 2.0 %}
+									<img src="{{ url_for('static', filename='images/twostarSmall.png') }}" alt="two stars" />
+								{% elif i.HER == 1.0 %}
+									<img src="{{ url_for('static', filename='images/onestarSmall.png') }}" alt="one stars" />
+								{% else %}
+									Not yet rated
+								{% endif %}
+							</td>
+						</tr>
+					{% endfor %}
+				</table>
+
+				<p>Check out some more ratings <a href="{{ url_for('ratings') }}">here</a></p>
+
+			</div>
+		</div>
+
+		<div class="rightcolumn">
+			<div class="contentsection">
+				<h2 class="sectionheader">Upcoming Matches</h2>
+
+				<table id="opinionstable">
+
+					{% for i in upcoming.itertuples() %}
+					<tr>
+						<th colspan="3">{{ i.Date }}</th>
+					</tr>
+						<tr class="matchseperation">
+							<td>
+								{{ i.HomeTeam }}
+							</td>
+							<td>vs</td>
+							<td>
+								{{ i.AwayTeam }}
+							</td>
+						</tr>
+					{% endfor %}
+				</table>
+			</div>
+
+			<div class="contentsection">
+				<h2 class="sectionheader">Teams</h2>
+				<p>You can also view specific teams from the English Premier league to see how
+					entertaining they are on average from all the matches they have player throughout
+						the 2018/19 season</p>
+				<p>Go <a href="{{ url_for('teams') }}">here</a> to view a specific team</p>
+			</div>
+
+			<div class="contentsection">
+				<h2 class="sectionheader">Tell us what you think</h2>
+				<p>In order for us to improve our results when it comes to predicting entertainment ratings for matches
+					we need to know how entertaining the fans find the matches.</p>
+				<p>Go <a href="{{ url_for('opinions') }}">here</a> and tell us how good you think each match is.</p>
+			</div>
+
+		</div>
+	</div>
+
+	<footer>
+		<p>Developed by: Liam Cooper</p>
+		<p>My Email: 916153@swansea.ac.uk</p>
+		<p>GoodGame pages:</p>
+		<p>| <a href="{{ url_for('home') }}">Home</a> | <a href="{{ url_for('ratings') }}">Ratings</a>
+			| <a href="{{ url_for('teams') }}">Teams</a> | <a href="{{ url_for('opinions') }}">Your Opinion</a>
+			| <a href="{{ url_for('contact') }}">Contact</a> |</p>
+		<p>&copy;Copyright 2019. All Rights Reserved.</p>
+	</footer>
+
+</body>
+</html>
