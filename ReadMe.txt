@@ -10,6 +10,3 @@ Below is how I deployed this project online: (I have not stored any of the folde
 It is best to use virtual environment so it can contain the specific needs for this project like the libraries.
 You will need files like "requirements.txt", "appengine_config.py" and "app.yaml" for configuration so the site can be deployed on the google cloud platform, then you will need a "lib" folder to contain the main libraries used by the application so they can be used while running on the cloud.
 To upload to cloud first activate the virtual environment then run the command "pip install -t lib -r requirements.txt" this will install the libraries needed. You can then run the command "gcloud deploy" to begin deployment to the cloud platform.
-The site can also be accessed online here: 
-https://goodgame-project.appspot.com
-
